@@ -1,0 +1,61 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="title"
+            type="com.example.administrator.fragmenttest.models.FragmentTitleBean"/>
+
+        <variable
+            name="titleOnclick"
+            type="com.example.administrator.fragmenttest.activity.MainActivity.TitleOnclick"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_weight="1"
+            android:id="@+id/ft_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv_title1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@color/colorAccent"
+            android:text="@{title.firstTitle}"
+            android:onClick="@{titleOnclick.firstOnclick}"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_title2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:background="@color/colorPrimary"
+                android:text="@{title.secondTitle}"
+                android:onClick="@{titleOnclick.secondOnclick}"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_title3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:background="@android:color/holo_red_light"
+                android:text="@{title.thirdTitle}"
+                android:onClick="@{titleOnclick.thirdOnclick}"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>
